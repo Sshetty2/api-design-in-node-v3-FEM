@@ -43,7 +43,6 @@ describe('API Authentication:', () => {
           .delete(`/api/item/${id}`)
           .set('Authorization', jwt)
       ])
-
       results.forEach(res => expect(res.statusCode).not.toBe(401))
     })
   })
